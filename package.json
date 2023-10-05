@@ -1,0 +1,40 @@
+{
+  "name": "ultralogger",
+  "version": "1.0.0",
+  "description": "A Personalized Logger that can work as a Normal Logger, API Req Logger, Can log in Files & even Mail in case of emergency.",
+  "main": "lib/index.js",
+  "type": "module",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "start": "node lib/index.js",
+    "dev": "nodemon src/index.ts",
+    "test-api": "nodemon ./__tests__/server.ts",
+    "build": "tsc -p .",
+    "prepare": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/arijitcodes/ultralogger"
+  },
+  "keywords": [
+    "UltraLogger",
+    "ultralogger",
+    "Logger",
+    "node logger"
+  ],
+  "author": "Arijit Banerjee <arijit.codes@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "on-finished": "^2.4.1",
+    "strip-ansi": "^7.1.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.18",
+    "@types/on-finished": "^2.3.2",
+    "express": "^4.18.2"
+  },
+  "files": [
+    "lib/**/*"
+  ]
+}
