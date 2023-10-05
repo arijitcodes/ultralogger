@@ -90,12 +90,9 @@ const APIReqLoggerBase: RequestHandler = (req, res, next): void => {
       ((baseConfig.logType === "FULL" || baseConfig.logType === "DEV") &&
         date) ||
       ""
-    }
-      ${(baseConfig.logType === "FULL" && ip) || ""}
-      ${method} - 
-      ${url} : 
-      ${statusCode} - 
-      ${totalResponseTimeInMS} ms`;
+    }${
+      (baseConfig.logType === "FULL" && ip) || ""
+    }${method} - ${url} : ${statusCode} - ${totalResponseTimeInMS} ms`;
 
     // Writing to console
     console.log(log);
