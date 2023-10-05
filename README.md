@@ -8,6 +8,8 @@
 
 ### Making your Javascript and Typescript life EZ AF! 🤝🏻🙏🏻
 
+Author: [Arijit Banerjee](#author)
+
 <br/>
 
 ## Features:
@@ -21,15 +23,13 @@
 - **Super Special Feature** - **FATAL LOG**: If you use this for Fatal Error Cases (HIGH SEVERITY), then you have an option to setup a SendGrid Email ApiKey - and our system will notify you, everytime one of these logs were made! 😉
   <br/>( Look, we know we all devs are lazy! 😴 No one got time to keep looking at em logs xD Devs gotta sleep every half an hour too 💤 Just gotta check the 📧 in-case 💩 goes 👇🏻)
 
+<br/>
+
 ---
 
 ## Setup & Usage:
 
-- **Import**: Yall know what this stuff is fs
-
-  ```typescript
-  import * as ultraLogger from "./index.js";
-  ```
+- **Import**: Import the package - Yall know what this stuff is fs
 
 - **Config**: Setup your own config with the config method and pass a config object of type ultraLoggerConfig.
 
@@ -47,6 +47,7 @@
   ```
 
   <br />
+
   Details about the Config Properties:
 
   <br />
@@ -175,10 +176,23 @@
 
 ## Author:
 
-Arijit Banerjee
+Author : [Arijit Banerjee](https://www.github.com/ArijitCodes)
+
+About : Full Stack Web Developer | Cyber Security Enthusiast | Actor
+
+Social Media : &nbsp;
+[![Instagram](https://i.ibb.co/4t76vTc/insta-transparent-14px.png) Instagram](https://www.instagram.com/arijit.codes)
+&nbsp;
+[![Linkedin](https://i.stack.imgur.com/gVE0j.png) LinkedIn](https://www.linkedin.com/in/arijitban)
+&nbsp;
+[![GitHub](https://i.stack.imgur.com/tskMh.png) GitHub](https://github.com/ArijitCodes)
+&nbsp;
+[![Website](https://i.ibb.co/wCV57xR/Internet-1.png) Website](https://iamarijit.dev)
 
 Email: arijit.codes@gmail.com
 
 Website: [iamarijit.dev](https://iamarijit.dev)
 
-More info will be updated soon!
+---
+
+More info about the project will be updated soon!
