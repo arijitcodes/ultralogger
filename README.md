@@ -8,7 +8,8 @@
 
 ### Making your Javascript and Typescript life EZ AF! 🤝🏻🙏🏻
 
-Author: [Arijit Banerjee](#author)
+Author: [Arijit Banerjee](#author) <br/>
+License: [MIT](./LICENSE.md)
 
 <br/>
 
