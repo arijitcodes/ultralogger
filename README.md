@@ -75,7 +75,7 @@ License: [MIT](./LICENSE.md)
 
   Sample Output (with the 'logType' set as "DEV"):
 
-  ![6 typed of logs - screenshot](screenshots/6-types-of-logs.png)
+  ![6 types of logs - screenshot](screenshots/6-types-of-logs.png)
 
 - Use as **Express Middleware** to Log Requests Data: You can use it like an express middleware.
 
