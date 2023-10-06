@@ -2,7 +2,9 @@
 
 <!-- ASCII ART of Logo / Name -->
 
+<div>
 <span style='font-family: "Lucida Console";line-height: 14px;font-size: 14px;display: inline-block;'>╔╗&nbsp;╔╗╔╗&nbsp;&nbsp;╔╗&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;╔╗&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>║║&nbsp;║║║║&nbsp;╔╝╚╗&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;║║&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>║║&nbsp;║║║║&nbsp;╚╗╔╝╔═╗╔══╗&nbsp;║║&nbsp;&nbsp;&nbsp;╔══╗╔══╗╔══╗╔══╗╔═╗<br>║║&nbsp;║║║║&nbsp;&nbsp;║║&nbsp;║╔╝╚&nbsp;╗║&nbsp;║║&nbsp;╔╗║╔╗║║╔╗║║╔╗║║╔╗║║╔╝<br>║╚═╝║║╚╗&nbsp;║╚╗║║&nbsp;║╚╝╚╗║╚═╝║║╚╝║║╚╝║║╚╝║║║═╣║║&nbsp;<br>╚═══╝╚═╝&nbsp;╚═╝╚╝&nbsp;╚═══╝╚═══╝╚══╝╚═╗║╚═╗║╚══╝╚╝&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;╔═╝║╔═╝║&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;╚══╝╚══╝&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br></span>
+</div>
 
 # UltraLogger - The only Logger System you need
 
@@ -10,6 +12,8 @@
 
 Author: [Arijit Banerjee](#author) <br/>
 License: [MIT](./LICENSE.md)
+
+![](./screenshots/demo.png)
 
 <br/>
 
@@ -32,26 +36,63 @@ License: [MIT](./LICENSE.md)
 
 - **Import**: Import the package - Yall know what this stuff is fs
 
+  For ECMAScript Module a.k.a ESM -
+
+  ```typescript
+  import ultraLogger from "ultralogger";
+  ```
+
+  For CommonJS a.k.a CJS -
+
+  ```typescript
+  const ultraLogger = require("ultralogger");
+  ```
+
 - **Config**: Setup your own config with the config method and pass a config object of type ultraLoggerConfig.
 
   ```typescript
   // UltraLogger Configuration
+  //  *** TYPESCRIPT ***
 
+  // Make a Config Object of type ultraLoggerConfig and pass it in the config()
   const config: ultraLogger.ultraLoggerConfig = {
     logType: "SHORT", // You can choose any of these 3 - "FULL" or, "DEV" or "SHORT"
-    writeToFile: true,
-    fileLocation: "./",
-    fileName: "UltraLogger.log",
   };
 
   ultraLogger.config(config);
+
+  // OR,
+
+  // Call the config method and write the config inside the ()
+  ultraLogger.config({
+    logType: "SHORT", // You can choose any of these 3 - "FULL" or, "DEV" or "SHORT"
+  });
   ```
 
-  <br />
+  ```js
+  // UltraLogger Configuration
+  //  *** JAVASCRIPT ***
+
+  // Make a Config Object and pass it in the config()
+  const config = {
+    logType: "SHORT", // You can choose any of these 3 - "FULL" or, "DEV" or "SHORT"
+  };
+
+  ultraLogger.config(config);
+
+  // OR,
+
+  // Call the config method and write the config inside the ()
+  ultraLogger.config({
+    logType: "SHORT", // You can choose any of these 3 - "FULL" or, "DEV" or "SHORT"
+  });
+  ```
+
+    <br />
 
   Details about the Config Properties:
 
-  <br />
+    <br />
 
   | **CONFIG PROPERTIES** | **TYPES**            | **OPTIONAL ?** | **VALUES**                                                        | **DEFAULT VALUE**                                                      |
   | --------------------- | -------------------- | -------------- | ----------------------------------------------------------------- | ---------------------------------------------------------------------- |
@@ -80,9 +121,21 @@ License: [MIT](./LICENSE.md)
 - Use as **Express Middleware** to Log Requests Data: You can use it like an express middleware.
 
   ```typescript
+  // *** TYPESCRIPT ***
   const app: Application = express();
 
   app.use(ultraLogger.APIReqLogger());
+
+  // Sample Output: [ 2023/10/05, 05:31:11 pm ] [ ::ffff:127.0.0.1 ] - [ GET ] - /api : 200 - 3 ms
+  ```
+
+  ```js
+  // *** JAVASCRIPT ***
+  const app = express();
+
+  app.use(ultraLogger.APIReqLogger());
+
+  // Sample Output: [ 2023/10/05, 05:31:11 pm ] [ ::ffff:127.0.0.1 ] - [ GET ] - /api : 200 - 3 ms
   ```
 
   OR,
@@ -90,17 +143,27 @@ License: [MIT](./LICENSE.md)
   If you just want to use UltraLogger as your Express API Request Logger - no need to setup the config. You can pass Log Option through the midleware method itself -
 
   ```typescript
+  // *** TYPESCRIPT ***
   const app: Application = express();
 
-  app.use(ultraLogger.APIReqLogger("FULL"));
+  app.use(ultraLogger.APIReqLogger("FULL")); // Available Options: "FULL", "DEV", "SHORT"
 
   // Sample Output: [ 2023/10/05, 05:31:11 pm ] [ ::ffff:127.0.0.1 ] - [ GET ] - /api : 200 - 3 ms
   ```
 
-  You can also use the APIReqLogger method without passing any values. In that case - "FULL" is set as Default. Ex:
+  ```js
+  // *** JAVASCRIPT ***
+  const app = express();
+
+  app.use(ultraLogger.APIReqLogger("FULL")); // Available Options: "FULL", "DEV", "SHORT"
+
+  // Sample Output: [ 2023/10/05, 05:31:11 pm ] [ ::ffff:127.0.0.1 ] - [ GET ] - /api : 200 - 3 ms
+  ```
+
+  If / when you use the APIReqLogger method as middleware without passing any values - "FULL" is set as Default Mode. Ex:
 
   ```typescript
-  app.use(ultraLogger.APIReqLogger());
+  app.use(ultraLogger.APIReqLogger()); // We set it as FULL - by Default
 
   // Sample Output: [ 2023/10/05, 05:31:11 pm ] [ ::ffff:127.0.0.1 ] - [ GET ] - /api : 200 - 3 ms
   ```
@@ -109,11 +172,9 @@ License: [MIT](./LICENSE.md)
 
   ![screenshot of long api logs](screenshots/full-api-log.png)
 
-  Or,
+  Or use "DEV" as option,
 
   ```typescript
-  const app: Application = express();
-
   app.use(ultraLogger.APIReqLogger("DEV"));
 
   // Sample Output: [ 2023/10/05, 05:31:10 pm ] [ GET ] - /api : 200 - 8 ms
@@ -123,11 +184,9 @@ License: [MIT](./LICENSE.md)
 
   ![screenshot of short api logs](screenshots/dev-api-log.png)
 
-  Or,
+  Or use "SHORT" as option,
 
   ```typescript
-  const app: Application = express();
-
   app.use(ultraLogger.APIReqLogger("SHORT"));
 
   // Sample Output: [ GET ] - /api : 200 - 2 ms
@@ -143,8 +202,24 @@ License: [MIT](./LICENSE.md)
   Ex:
 
   ```typescript
+  // *** TYPESCRIPT ***
+
   // UltraLogger Configuration
   const config: ultraLogger.ultraLoggerConfig = {
+    logType: "DEV",
+    writeToFile: true,
+    fileLocation: "./",
+    fileName: "UltraLogger.log",
+  };
+
+  ultraLogger.config(config);
+  ```
+
+  ```js
+  // ***JAVASCRIPT ***
+
+  // UltraLogger Configuration
+  const config = {
     logType: "DEV",
     writeToFile: true,
     fileLocation: "./",
@@ -157,6 +232,8 @@ License: [MIT](./LICENSE.md)
   Or, you can directly create and pass the Config Object while calling the config(). Ex:
 
   ```typescript
+  // Same for both Typescript & Javascript
+
   ultraLogger.config({
     logType: "DEV",
     writeToFile: true,
