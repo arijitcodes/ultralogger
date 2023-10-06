@@ -15,7 +15,30 @@ License: [MIT](./LICENSE.md)
 
 ![Demo Screenshot](./screenshots/demo.png)
 
-<br/>
+<br />
+
+<!-- shields.io Badges -->
+
+<!-- Websites / Links - Up / Down -->
+
+<!-- ![NPM Package Link](https://img.shields.io/website?url=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2Fultralogger&style=for-the-badge&logo=npm&label=npm%20package&labelColor=%23232323&link=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2Fultralogger) &nbsp;&nbsp;
+![GitHub Repository Link](https://img.shields.io/website?url=https%3A%2F%2Fgithub.com%2Farijitcodes%2Fultralogger&style=for-the-badge&logo=github&label=repository&labelColor=%23232323) &nbsp;&nbsp; -->
+
+<a href="https://www.npmjs.com/package/ultralogger"><img alt="NPM Package Link - Up/Down Indicator" src="https://img.shields.io/website?url=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2Fultralogger&style=for-the-badge&logo=npm&label=npm%20package&labelColor=%23232323" /></a> &nbsp;
+<a href="https://github.com/arijitcodes/ultralogger"><img alt="GitHub Repository Link - Up/Down Indicator" src="https://img.shields.io/website?url=https%3A%2F%2Fgithub.com%2Farijitcodes%2Fultralogger&style=for-the-badge&logo=github&label=repository&labelColor=%23232323" /></a>&nbsp;
+
+<!-- NPM Badges -->
+
+![NPM License](https://img.shields.io/npm/l/ultralogger?style=for-the-badge&logo=npm&labelColor=%23232323&color=%23404040) &nbsp;
+![NPM Version](https://img.shields.io/npm/v/ultralogger?style=for-the-badge&logo=npm&labelColor=%23232323&color=%23404040) &nbsp;
+![npm collaborators](https://img.shields.io/npm/collaborators/ultralogger?style=for-the-badge&logo=npm&label=collaborators&labelColor=%23232323&color=%23404040) &nbsp;
+![npm type definitions](https://img.shields.io/npm/types/ultralogger?style=for-the-badge&logo=npm&labelColor=%23232323) &nbsp;
+
+<!-- GitHub Badges -->
+
+![GitHub language count](https://img.shields.io/github/languages/count/arijitcodes/ultralogger?style=for-the-badge&logo=github&labelColor=%23232323&color=%23404040) &nbsp;
+![GitHub top language](https://img.shields.io/github/languages/top/arijitcodes/ultralogger?style=for-the-badge&logo=github&labelColor=%23232323) &nbsp;
+![GitHub last commit (branch)](https://img.shields.io/github/last-commit/arijitcodes/ultralogger/main?style=for-the-badge&logo=github&labelColor=%23232323) &nbsp;
 
 ## Features:
 
