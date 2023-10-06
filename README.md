@@ -13,7 +13,7 @@
 Author: [Arijit Banerjee](#author) <br/>
 License: [MIT](./LICENSE.md)
 
-![](./screenshots/demo.png)
+![Demo Screenshot](./screenshots/demo.png)
 
 <br/>
 
