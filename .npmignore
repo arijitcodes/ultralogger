@@ -1,0 +1,9 @@
+node_modules
+__tests__
+screenshots
+src
+lib
+.git
+.gitignore
+.prettierrc
+*.ts

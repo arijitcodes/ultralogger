@@ -2,6 +2,10 @@
 /dist
 /lib
 
+# Custom
+**/*.backup
+*tsup.config*
+
 # Tests
 __tests__/
 
