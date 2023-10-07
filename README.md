@@ -127,6 +127,9 @@ License: [MIT](./LICENSE.md)
 
 <br />
 
+- **JSDoc & Types Support:** Just hover over the method name that you want to know more about, and you should get the JSDoc info for that method. FOr ex: here we are hovering over the config method because we want some more info:
+  ![JSDoc & Types Support](screenshots/jsdoc-suggestion-onhover.png)
+
 - New 6 Types of **Colorful Logs** for your Daily Coding and Debugging sessions: We are bringing you 6 types of different logs through UltraLogger - which you can use instead of your everyday boring console.log() :
 
   ```typescript
@@ -141,9 +144,6 @@ License: [MIT](./LICENSE.md)
   Sample Output (with the 'logType' set as "DEV"):
 
   ![6 types of logs - screenshot](screenshots/6-types-of-logs.png)
-
-- **JSDoc & Types Support:** Just hover over the method name that you want to know more about, and you should get the JSDoc info for that method. FOr ex: here we are hovering over the config method because we want some more info:
-  ![JSDoc & Types Support](screenshots/jsdoc-suggestion-onhover.png)
 
 - Use as **Express Middleware** to Log Requests Data: You can use it like an express middleware.
 
