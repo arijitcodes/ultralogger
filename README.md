@@ -43,6 +43,7 @@ License: [MIT](./LICENSE.md)
 ## Features:
 
 - Types Support for Intellisense 💡
+- JSDoc In Code Documentation - just like any good library, we provide documentation, information and examples for our functions and methods on hover using JSdoc and TS. 🤙🏻
 - Config method to create and setup configs for different features ☸
 - Customizable Log Size and Information 💪🏻
 - 6 Types of Colorful & Pre-formatted Log Methods - to make your life easy while debugging (we all know logs are superior to debuggers 😏 - who uses debugger anyways eww 🤢🤮)
@@ -62,7 +63,7 @@ License: [MIT](./LICENSE.md)
   For ECMAScript Module a.k.a ESM -
 
   ```typescript
-  import ultraLogger from "ultralogger";
+  import * as ultraLogger from "ultralogger";
   ```
 
   For CommonJS a.k.a CJS -
@@ -140,6 +141,9 @@ License: [MIT](./LICENSE.md)
   Sample Output (with the 'logType' set as "DEV"):
 
   ![6 types of logs - screenshot](screenshots/6-types-of-logs.png)
+
+- **JSDoc & Types Support:** Just hover over the method name that you want to know more about, and you should get the JSDoc info for that method. FOr ex: here we are hovering over the config method because we want some more info:
+  ![JSDoc & Types Support](screenshots/jsdoc-suggestion-onhover.png)
 
 - Use as **Express Middleware** to Log Requests Data: You can use it like an express middleware.
 

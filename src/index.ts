@@ -191,16 +191,4 @@ const muted = (text: string): void => {
   writeCustomLog(text, "MUTED");
 };
 
-export {
-  ultraLoggerConfig as UltraLoggerConfig,
-  config,
-  APIReqLogger,
-  log,
-  info,
-  warn,
-  error,
-  success,
-  muted,
-};
-
-export default { config, APIReqLogger, log, info, warn, error, success, muted };
+export { config, APIReqLogger, log, info, warn, error, success, muted };

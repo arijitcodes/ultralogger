@@ -18,7 +18,9 @@ function createEsmModulePackageJson() {
         if (!fs.existsSync(packageJsonFile)) {
           fs.writeFile(
             packageJsonFile,
-            new Uint8Array(Buffer.from('{"type": "module"}')),
+            new Uint8Array(
+              Buffer.from('{"type": "module", "types": "index.d.ts"}')
+            ),
             function (err) {
               if (err) {
                 throw err;
@@ -34,7 +36,9 @@ function createEsmModulePackageJson() {
         if (!fs.existsSync(packageJsonFile)) {
           fs.writeFile(
             packageJsonFile,
-            new Uint8Array(Buffer.from('{"type": "commonjs"}')),
+            new Uint8Array(
+              Buffer.from('{"type": "commonjs", "types": "index.d.ts"}')
+            ),
             function (err) {
               if (err) {
                 throw err;
