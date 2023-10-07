@@ -7,6 +7,7 @@ import { generateDateTimeFormat } from "./formatDate.js";
  * @type {Varient} Varient: Varient of the Log. Options: LOG | INFO | WARNING | ERROR | SUCCESS | MUTED
  */
 type Varient = "LOG" | "INFO" | "WARNING" | "ERROR" | "SUCCESS" | "MUTED";
+type CustomLogType = "APP_SELF" | "CLIENT";
 
 const color = {
   LOG: chalk.blueBright,
@@ -23,9 +24,18 @@ const color = {
  *
  * @param {string} text - Text to be printed
  * @param {Varient} [varient="INFO"] - Type of the Log. Varient Options: LOG | INFO | WARNING | ERROR | SUCCESS | MUTED
+ * @param {CustomLogType} [customLogType="CLIENT"] - Type of the Log. CustomLogType Options: APP_SELF | CLIENT
  * @returns {void} Void
  */
-export default (text: string, varient: Varient = "INFO"): void => {
+export default (
+  text: string,
+  varient: Varient = "INFO",
+  customLogType: CustomLogType = "CLIENT"
+): void => {
   const dateTime: string = generateDateTimeFormat(Date.now());
-  console.log(`${color["MUTED"](dateTime)}${color[varient](text)}`);
+  console.log(
+    `${color["MUTED"](dateTime)}${
+      customLogType === "APP_SELF" ? chalk.magenta("[ UltraLog ] ") : ""
+    }${color[varient](text)}`
+  );
 };

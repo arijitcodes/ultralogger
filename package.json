@@ -1,6 +1,6 @@
 {
   "name": "ultralogger",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "A Personalized Logger that can work as a Normal Logger, API Req Logger, Can log in Files & even Mail in case of emergency.",
   "type": "module",
   "types": "./dist/esm/index.d.ts",
@@ -14,8 +14,8 @@
   },
   "scripts": {
     "start": "node lib/index.js",
-    "dev": "nodemon src/index.ts",
-    "test-api": "nodemon ./__tests__/server.ts",
+    "dev": "nodemon --esm src/index.ts",
+    "test-api": "nodemon --esm ./__tests__/server.ts",
     "build": "tsc -p .",
     "build:dual": "rm -rf ./dist && tsc -b ./tsconfig-esm.json ./tsconfig-cjs.json && node ./scripts/prepare-package-jsons.cjs",
     "build:tsup": "rm -rf ./dist && tsup",

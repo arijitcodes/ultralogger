@@ -1,6 +1,8 @@
 import fs from "fs/promises";
 
 import ultraLoggerConfig from "../interfaces/ultraLoggerConfig.js";
+import { isDirectory } from "./fsAsyncHelpers.js";
+import formatFolderAndFileNames from "./formatFolderAndFileNames.js";
 
 /**
  * This method takes in a ultraLoggerConfig object and a Clean Log as string and appends the Log to the Log File - specified in the ultraLoggerConfig object.
@@ -18,10 +20,19 @@ export default async (
   cleanLog: string
 ): Promise<void | Error> => {
   try {
-    fs.appendFile(
-      `${baseConfig.fileLocation}${baseConfig.fileName}`,
-      cleanLog + "\n"
-    );
+    // Check if directory exists or has been deleted
+    isDirectory(`${baseConfig.fileLocation}`).then((isDir) => {
+      if (!isDir) {
+        // If dir doesn't exist, create it
+        formatFolderAndFileNames(baseConfig);
+      } else {
+        // If directory exists, append log to file
+        fs.appendFile(
+          `${baseConfig.fileLocation}${baseConfig.fileName}`,
+          cleanLog + "\n"
+        );
+      }
+    });
   } catch (err) {
     throw err;
   }

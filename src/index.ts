@@ -16,12 +16,13 @@ import formatChalkStringToNormalString from "./utils/formatChalkStringToNormalSt
 import writeLogToFile from "./utils/writeLogToFile.js";
 import writeCustomLog from "./utils/writeCustomLog.js";
 import formatIPAddress from "./utils/formatIPAddress.js";
+import formatFolderAndFileNames from "./utils/formatFolderAndFileNames.js";
 
 // Default Base Config
 let baseConfig: ultraLoggerConfig = {
   logType: "FULL",
   writeToFile: false,
-  fileLocation: "./",
+  fileLocation: "./logs",
   fileName: "UltraLogger.log",
 };
 
@@ -42,9 +43,9 @@ let baseConfig: ultraLoggerConfig = {
  *
  * @example <caption>Method 1: Create a Config Object of ultraLoggerConfig interface and pass it into the config method.</caption>
  * const config: ultraLoggerConfig = {
- *  logType: "FULL",
- *  writeToFile: true,
- *  fileLocation: "./",
+ *  logType: "FULL",    // Set to "FULL" by Default
+ *  writeToFile: true,  // Set to false by default
+ *  fileLocation: "./logs",
  *  fileName: "UltraLogger.log"
  * }
  *
@@ -54,14 +55,39 @@ let baseConfig: ultraLoggerConfig = {
  *
  * @example <caption>Method 2: Pass the ultraLoggerConfig directly into the config method.</caption>
  * ultraLogger.config({
- *  logType: "FULL",
- *  writeToFile: true,
- *  fileLocation: "./",
+ *  logType: "FULL",    // Set to "FULL" by Default
+ *  writeToFile: true,  // Set to false by default
+ *  fileLocation: "logs",
  *  fileName: "UltraLogger.log"
  * })
  */
 const config = (config: ultraLoggerConfig): void => {
   baseConfig = { ...baseConfig, ...config };
+
+  // If config method has been called by client, then Formatting the Folder and File Details
+  // And creating the folder - if it doesn't exist.
+  formatFolderAndFileNames(baseConfig);
+
+  // Writing the Base Config Details to the Console.
+  writeCustomLog(
+    "==================================================",
+    "MUTED",
+    "APP_SELF"
+  );
+  writeCustomLog("Base Configuration Setup is Starting...", "INFO", "APP_SELF");
+  Object.keys(baseConfig).forEach((key: string) => {
+    writeCustomLog(
+      `${key}: ${baseConfig[key as keyof ultraLoggerConfig]}`,
+      "WARNING",
+      "APP_SELF"
+    );
+  });
+  writeCustomLog("Base Confguration Setup is Done...", "SUCCESS", "APP_SELF");
+  writeCustomLog(
+    "==================================================",
+    "MUTED",
+    "APP_SELF"
+  );
 };
 
 /**
