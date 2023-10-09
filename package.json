@@ -1,6 +1,6 @@
 {
   "name": "ultralogger",
-  "version": "1.2.1",
+  "version": "1.3.1",
   "description": "A Personalized Logger that can work as a Normal Logger, API Req Logger, Can log in Files & even Mail in case of emergency.",
   "type": "module",
   "types": "./dist/esm/index.d.ts",
