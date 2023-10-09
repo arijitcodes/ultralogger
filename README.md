@@ -1,10 +1,13 @@
 <br/>
 
 <!-- ASCII ART of Logo / Name -->
-
+<!--
 <div>
 <span style='font-family: "Lucida Console";line-height: 14px;font-size: 14px;display: inline-block;'>╔╗&nbsp;╔╗╔╗&nbsp;&nbsp;╔╗&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;╔╗&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>║║&nbsp;║║║║&nbsp;╔╝╚╗&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;║║&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>║║&nbsp;║║║║&nbsp;╚╗╔╝╔═╗╔══╗&nbsp;║║&nbsp;&nbsp;&nbsp;╔══╗╔══╗╔══╗╔══╗╔═╗<br>║║&nbsp;║║║║&nbsp;&nbsp;║║&nbsp;║╔╝╚&nbsp;╗║&nbsp;║║&nbsp;╔╗║╔╗║║╔╗║║╔╗║║╔╗║║╔╝<br>║╚═╝║║╚╗&nbsp;║╚╗║║&nbsp;║╚╝╚╗║╚═╝║║╚╝║║╚╝║║╚╝║║║═╣║║&nbsp;<br>╚═══╝╚═╝&nbsp;╚═╝╚╝&nbsp;╚═══╝╚═══╝╚══╝╚═╗║╚═╗║╚══╝╚╝&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;╔═╝║╔═╝║&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;╚══╝╚══╝&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br></span>
 </div>
+ -->
+
+![Logo](screenshots/logo.png)
 
 # UltraLogger - The only Logger System you need
 
