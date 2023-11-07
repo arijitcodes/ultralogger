@@ -19,7 +19,9 @@
     "build": "tsc -p .",
     "build:dual": "rm -rf ./dist && tsc -b ./tsconfig-esm.json ./tsconfig-cjs.json && node ./scripts/prepare-package-jsons.cjs",
     "build:tsup": "rm -rf ./dist && tsup",
-    "prepare": "npm run build:dual"
+    "packGithubBuild": "rm -rf ./build.tar.gz && tar -cvzf build.tar.gz dist CHANGELOG.md package.json",
+    "prepare": "npm run build:dual",
+    "semantic-release": "npm run packGithubBuild && semantic-release"
   },
   "repository": {
     "type": "git",
@@ -39,14 +41,19 @@
     "strip-ansi": "^6.0.1"
   },
   "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
     "@types/express": "^4.17.18",
     "@types/node": "^20.8.2",
     "@types/on-finished": "^2.3.2",
+    "cz-conventional-changelog": "^3.3.0",
     "express": "^4.18.2",
+    "semantic-release": "^22.0.7",
     "tsup": "^7.2.0",
     "typescript": "^5.2.2"
   },
   "files": [
-    "dist/**/*"
+    "dist/**/*",
+    "CHANGELOG.md"
   ]
 }
