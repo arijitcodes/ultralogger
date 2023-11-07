@@ -1,3 +1,16 @@
+## [1.4.1](https://github.com/arijitcodes/ultralogger/compare/v1.4.0...v1.4.1) (2023-11-07)
+
+
+### Bug Fixes
+
+✅ **package.json & release.config.cjs:** fixed the GitHub Build Label, Name issue ([449c16a](https://github.com/arijitcodes/ultralogger/commit/449c16a61ef32557ad0b5f19984845c3a5e4293a)), closes [#2](https://github.com/arijitcodes/ultralogger/issues/2)  
+
+- Fixed the Label of GitHub Release in release.config.cjs for semantic-release
+- Fixed the Name of
+GitHub Release in release.config.cjs for semantic-release
+- Fix the Build File Name in package.json
+Build Scripts <br/><br/>
+
 # [1.4.0](https://github.com/arijitcodes/ultralogger/compare/v1.3.1...v1.4.0) (2023-11-07)
 
 
