@@ -19,7 +19,7 @@
     "build": "tsc -p .",
     "build:dual": "rm -rf ./dist && tsc -b ./tsconfig-esm.json ./tsconfig-cjs.json && node ./scripts/prepare-package-jsons.cjs",
     "build:tsup": "rm -rf ./dist && tsup",
-    "packGithubBuild": "rm -rf ./build.tar.gz && tar -cvzf build.tar.gz dist CHANGELOG.md package.json",
+    "packGithubBuild": "rm -rf ./UltraLogger.tar.gz && tar -cvzf UltraLogger.tar.gz dist CHANGELOG.md package.json",
     "prepare": "npm run build:dual",
     "semantic-release": "npm run packGithubBuild && semantic-release"
   },

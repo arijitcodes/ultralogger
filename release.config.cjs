@@ -26,9 +26,9 @@ module.exports = {
       "@semantic-release/github",
       {
         assets: {
-          path: "./build.tar.gz",
-          name: "@arijitcodes-test-semantic-release_v${nextRelease.version}.tgz",
-          label: "Build v${nextRelease.version}",
+          path: "./UltraLogger.tar.gz",
+          name: "UltraLogger_v${nextRelease.version}.tgz",
+          label: "UltraLogger Build v${nextRelease.version}",
         },
       },
     ],
